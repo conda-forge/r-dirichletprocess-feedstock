@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dirichletprocess_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dirichletprocess/dirichletprocess_{{ version }}.tar.gz
-  sha256: 1a514fb42b488ecd37f32c9a853007947b5bef664638468f4c927da56760d378
+  sha256: 925d5d292afabe77d24c277819d4ae7b743437a3dee2ae80bafb4a5a2a03a0ac
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,8 +43,8 @@ test:
 about:
   home: https://github.com/dm13450/dirichletprocess
   license: GPL-3.0-or-later
-  summary: "Perform nonparametric Bayesian analysis using Dirichlet processes without the need to program the inference algorithms. Utilise included pre-built models or specify custom models and allow the 'dirichletprocess' package to handle the Markov chain Monte Carlo sampling. Our Dirichlet process objects can act as\
-    \ building blocks for a variety of statistical models including and not limited to: density estimation, clustering and prior distributions in hierarchical models. See Teh, Y. W. (2011) <https://www.stats.ox.ac.uk/~teh/research/npbayes/Teh2010a.pdf>, among many other sources."
+  summary: "Perform nonparametric Bayesian analysis using Dirichlet processes without the need to program the inference algorithms. Utilise included pre-built models or specify custom models and allow the 'dirichletprocess' package to handle the Markov chain Monte Carlo sampling. Our Dirichlet process objects can act as
+    building blocks for a variety of statistical models including and not limited to: density estimation, clustering and prior distributions in hierarchical models. See Teh, Y. W. (2011) <https://www.stats.ox.ac.uk/~teh/research/npbayes/Teh2010a.pdf>, among many other sources."
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
